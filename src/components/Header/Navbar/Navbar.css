@@ -66,6 +66,7 @@ input::placeholder{
     width: 211px;
     height: 24px;
     font-weight: 400px;
+    text-align: center;
     padding-left: 1rem;
     color: white;
 }
@@ -95,5 +96,8 @@ input::placeholder{
 .movieSearchIcon{
     caret-color: white;
     color: white;
-    padding: 15px;
+    /* padding: 15px; */
+    font-size: 16px;
+    text-align: center;
 }
+
