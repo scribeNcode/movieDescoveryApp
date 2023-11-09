@@ -1,8 +1,10 @@
 .NavbarWrapper{
 
     /* display: block; */
-    width: 1440px;
+    width: 100vw;
+    
     height: 80px;
+    /* background-color: blueviolet; */
 }
 
 .NavWrapperContents{

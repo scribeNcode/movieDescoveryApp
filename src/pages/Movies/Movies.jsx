@@ -1,11 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Movies/Movies.css";
 import Logo from "./assets/Tv.png";
-import {GoHome} from 'react-icons/go'
-import {BsCameraReels} from 'react-icons/bs'
-import {PiMonitorPlayLight} from 'react-icons/pi'
-import {VscCalendar} from 'react-icons/vsc'
+import { GoHome } from "react-icons/go";
+import { BsCameraReels } from "react-icons/bs";
+import { PiMonitorPlayLight } from "react-icons/pi";
+import { VscCalendar } from "react-icons/vsc";
+import { useParams } from "react-router-dom";
+import YouTube from "react-youtube";
+
 function Movies() {
+  const apiKey = "af8c4fba7821c96b004fea0b10149066";
+
+  const [movieId, setMovieId] = useState([]);
+  const params = useParams();
+
+ 
+
+  useEffect(() => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/${params.id}/videos?api_key=${apiKey}&language=en-US`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const movieKey = data.results[0].key;
+
+        setMovieId(movieKey);
+      })
+      .catch((err) => {
+        console.log("Something went wrong :", err);
+      });
+    console.log();
+  }, []);
+
+// youtube video tag options 
+  const opts = {
+    height: '350',
+    width: '100%',
+  };
+
   return (
     <div className="moviesPageWrapper">
       <div className="moviesSideBarArea">
@@ -16,15 +48,47 @@ function Movies() {
           </div>
 
           <ul className="moviesNavigationsContainer">
-            <li> <span className="moviesNavigationIcon">< GoHome/></span> <span id="goHomeName" className="moviesNavigationName" >Home</span></li>
-          <li> <span className="moviesNavigationIcon"><BsCameraReels/></span>  <span id="moviesHomeName" className="moviesNavigationName" >Movies</span> </li>
-          <li> <span className="moviesNavigationIcon"><PiMonitorPlayLight/></span> <span className="moviesNavigationName" >Tv series</span></li>
-          <li> <span className="moviesNavigationIcon"><VscCalendar/></span>  <span className="moviesNavigationName" >Upcoming</span> </li>
+            <li>
+              {" "}
+              <span className="moviesNavigationIcon">
+                <GoHome />
+              </span>{" "}
+              <span id="goHomeName" className="moviesNavigationName">
+                Home
+              </span>
+            </li>
+            <li>
+              {" "}
+              <span className="moviesNavigationIcon">
+                <BsCameraReels />
+              </span>{" "}
+              <span id="moviesHomeName" className="moviesNavigationName">
+                Movies
+              </span>{" "}
+            </li>
+            <li>
+              {" "}
+              <span className="moviesNavigationIcon">
+                <PiMonitorPlayLight />
+              </span>{" "}
+              <span className="moviesNavigationName">Tv series</span>
+            </li>
+            <li>
+              {" "}
+              <span className="moviesNavigationIcon">
+                <VscCalendar />
+              </span>{" "}
+              <span className="moviesNavigationName">Upcoming</span>{" "}
+            </li>
           </ul>
-
         </div>
       </div>
-      <div className="moviesPageViewArea">mainview</div>
+      <div className="moviesPageViewArea">
+        <div className="video-box">
+          <YouTube id="youtubeTag" videoId={movieId} opts={opts}  />
+        </div>
+        
+      </div>
     </div>
   );
 }

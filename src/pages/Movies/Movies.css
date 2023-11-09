@@ -1,6 +1,6 @@
 .moviesPageWrapper{
-    background: whitesmoke;
-    max-width: 100vw;
+    /* background: whitesmoke; */
+    max-width: 100%;
     height: 100vh;
     display: flex;
     
@@ -9,7 +9,7 @@
 }
 
 .moviesSideBarArea{
-    background: limegreen;
+    /* background: limegreen; */
     height: 100%;
     width: 20%;
     margin-left: 0;
@@ -33,7 +33,7 @@
 }
 
 .moviesNavigationsContainer{
-    background: lemonchiffon;
+    /* background: lemonchiffon; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +46,7 @@
 .moviesNavigationsContainer li{
     width: 100%;
     height: 50px;
-    background: greenyellow;
+    /* background: greenyellow; */
     display: flex;
     padding-left: 0;
     font-size: larger;
@@ -76,6 +76,17 @@
 }
 
 .moviesPageViewArea{
-    background: yellow;
+    /* background: yellow; */
     width: 80%;
+}
+
+.video-box{
+    /* background: pink; */
+    width: 90%;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+#youtubeTag{
+    border-radius: 1rem;
 }
