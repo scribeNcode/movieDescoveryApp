@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../Movies/Movies.css";
 import Logo from "./assets/Tv.png";
 import { GoHome } from "react-icons/go";
@@ -30,7 +31,7 @@ function Movies() {
         console.log("Something went wrong :", err);
       });
     console.log();
-  }, []);
+  }, [params.id]);
 
 // youtube video tag options 
   const opts = {
@@ -48,7 +49,7 @@ function Movies() {
           </div>
 
           <ul className="moviesNavigationsContainer">
-            <li>
+            <NavLink to='/'>
               {" "}
               <span className="moviesNavigationIcon">
                 <GoHome />
@@ -56,8 +57,8 @@ function Movies() {
               <span id="goHomeName" className="moviesNavigationName">
                 Home
               </span>
-            </li>
-            <li>
+            </NavLink>
+            <NavLink>
               {" "}
               <span className="moviesNavigationIcon">
                 <BsCameraReels />
@@ -65,28 +66,33 @@ function Movies() {
               <span id="moviesHomeName" className="moviesNavigationName">
                 Movies
               </span>{" "}
-            </li>
-            <li>
+            </NavLink>
+            <NavLink>
               {" "}
               <span className="moviesNavigationIcon">
                 <PiMonitorPlayLight />
               </span>{" "}
               <span className="moviesNavigationName">Tv series</span>
-            </li>
-            <li>
+            </NavLink>
+            <NavLink>
               {" "}
               <span className="moviesNavigationIcon">
                 <VscCalendar />
               </span>{" "}
               <span className="moviesNavigationName">Upcoming</span>{" "}
-            </li>
+            </NavLink>
           </ul>
         </div>
       </div>
       <div className="moviesPageViewArea">
-        <div className="video-box">
-          <YouTube id="youtubeTag" videoId={movieId} opts={opts}  />
-        </div>
+        {
+          movieId.length > 0 ? (
+            <div className="video-box">
+            <YouTube id="youtubeTag" videoId={movieId} opts={opts}  />
+          </div>
+          ): <h2>Loading ...</h2>
+        }
+
         
       </div>
     </div>
