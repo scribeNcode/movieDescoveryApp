@@ -5,10 +5,12 @@ import Card from "../../components/Card/Card"
 function Home() {
   return (
     <div className="homePage_container">
-        <div className="headerCardWrapper el1"><Header/></div>
+      <Header/>
+      <Card/>
+        {/* <div className="headerCardWrapper el1"><Header/></div>
          <div className="FeaturedMovieWrapper el2">
            <Card/>
-          </div> 
+          </div>  */}
           
     </div>
   )

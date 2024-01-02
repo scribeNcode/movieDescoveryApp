@@ -15,9 +15,7 @@ function Movies() {
   const [movieId, setMovieId] = useState([]);
   const params = useParams();
 
- 
-
-  useEffect(() => {
+  const loadMovie = ()=>{
     fetch(
       `https://api.themoviedb.org/3/movie/${params.id}/videos?api_key=${apiKey}&language=en-US`
     )
@@ -30,7 +28,11 @@ function Movies() {
       .catch((err) => {
         console.log("Something went wrong :", err);
       });
-    console.log();
+  }
+ 
+
+  useEffect(() => {
+    loadMovie()
   }, [params.id]);
 
 // youtube video tag options 
@@ -40,7 +42,7 @@ function Movies() {
   };
 
   return (
-    <div className="moviesPageWrapper">
+    <div className="moviesPageWrapper ">
       <div className="moviesSideBarArea">
         <div className="moviesSideBarcontainer">
           <div className="moviesLogoContainer">
@@ -84,7 +86,7 @@ function Movies() {
           </ul>
         </div>
       </div>
-      <div className="moviesPageViewArea">
+      <div className="moviesPageViewArea  delayed-div">
         {
           movieId.length > 0 ? (
             <div className="video-box">

@@ -1,7 +1,44 @@
 .landing-page{
-    background: url(./assets/Poster.png) ;
+    background: url(./assets/hero-image.jpg) ;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 90vh;
+    position: relative;
+}
+
+.landing-page-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+}
+
+
+h1,p{
+    color: white;
+    filter: brightness(100%);
+}
+
+.nav{
+    filter: brightness(100%);
+}
+
+.landing-page-hero-sec{
+    margin-top: 5rem;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+    background: orangered;
+    text-align: center;
+}
+
+
+
+.sign-up-div{
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
 }

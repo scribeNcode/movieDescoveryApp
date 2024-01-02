@@ -1,3 +1,25 @@
+/* Define the animation */
+@keyframes delayAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to the div with a delay */
+  .delayed-div {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: delayAnimation 1s ease-in-out 1s forwards;
+    /* 
+      The 'forwards' keyword ensures that the styles defined in the 'to' keyframe persist 
+      after the animation completes. Adjust the values as needed.
+    */
+  }
+  
+
+
+
 .moviesPageWrapper{
     /* background: whitesmoke; */
     max-width: 100%;

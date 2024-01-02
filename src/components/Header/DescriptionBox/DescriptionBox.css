@@ -1,147 +1,64 @@
 .DescriptionBox{
-    /* background: grey; */
-    height: 320px;
-    width: 100vw;
-    margin-top: 158px;
+    background: grey;
+    width: 80vw;
+    margin-top: 25vh;
+    color: white;
 }
 
-.text_div{
-    width: 100%;
-    height: 112px;
-    color: white;
-    /* background-color: red; */
-    padding-left: 98px;
+.description-text-div h2{
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    /* background: indianred; */
+    border: 1px solid red;
+    width: 15.1rem;
 }
 
 .descriptionBoxTextArea{
-    /* background: yellowgreen; */
+    background: red;
+    margin-top: 8px;
 }
 
 .ratingBox{
+    width: 11rem;
+    margin-bottom: 8px;
+    background: indigo;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 184px;
-    height: 17px; 
-    /* background-color: brown; */
     margin-left: 0;
-    margin-top: 16px;
-    margin-bottom: 16px;
-    margin-left: 98px;
-    
 }
 
 .IMBD_div{
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 101px;
-    height: 17px;
     margin-left: 0;
-    
+    background: blue;
 }
 
-.IMBD_div img{
-    padding-right: 10px;
+#IMBD_text{
+    font-size: smaller;
 }
 
-
-
-
-
-
-
-
-.IMBD_logo{
-   
-    width: 35px;
-    height: 17px;
-}
-
-.IMBD_text{
-    /* width: auto ;
-    height:auto ; */
-    /* margin-bottom: 5rem; */
-    font-size: 12px;
-    /* line-height: 12px; */
-    color: white;
-    
-    font-weight: 400;
-}
-
-button{
+.rotten_tomatoes_div{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px, 16px, 6px, 16px;
-    gap: 8px;
-    margin-left: 98px;
-    margin-top: 46px;
-
-}
-
-
-.rotten_tomatoes_div{
-    width: 49px;
-    height: 17px;
-    
+    gap: 0.5rem;
     margin-right: 0;
 }
 
-
-
-.DescriptionBox p{
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
+#tomatoPercentage{
+    font-size: smaller;
 }
 
-.tomatoLogo{
-    background-image: url('./assets/Rotten\ Tomatoes.png');
-    background-size: cover;
-    width: 16px;
-height: 17px;
-
-}
-
-.jhonWickDescription{
-    width: 302px;
-    height: 72px;
+.poster-movie-description{
     margin-left: 0;
+   margin-bottom: 8px;
+   background: indianred;
+   width: 15.1rem;
 }
 
-.jhonWickDescription p{
-    font-size: 14px;
-    line-height: 18px;
+.poster-movie-description p{
     font-weight: 500;
-    color: white;
-    margin-left: 98px ;
-    /* background-color: blueviolet; */
+    font-size: 12px;
+    letter-spacing: 0.3px;
 }
-
-.DescriptionBox Button{
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #BE123C;
-    color: #ffffff;
-    border: 0;
-    border-radius: 6px; */
-    /* padding: 10px 20px; */
-    /* font-size: 16px; */
-    /* padding: 6px, 16px, 6px, 16px; */
-    /* width: 169px;
-    height: 36px;
-    cursor: pointer; */
-    
-    width: 169px;
-    height: 36px;
-    border: 0;
-    border-radius: 6px;
-    padding: 6px, 16px, 6px, 16px;
-    background: #BE123C;
-    color: white;
-    justify-content: center;
-    text-align: center;
-}
-
