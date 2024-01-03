@@ -62,3 +62,16 @@
     font-size: 12px;
     letter-spacing: 0.3px;
 }
+
+.DescriptionBox Button{
+    width: 169px;
+    height: 36px;
+    border: 0;
+    border-radius: 6px;
+    padding: 6px, 16px, 6px, 16px;
+    background: #BE123C;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
