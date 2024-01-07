@@ -7,6 +7,16 @@
     position: relative;
 }
 
+.landing-page-hero-sec h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.landing-page-hero-sec p{
+    padding-top: 1rem;
+   
+}
+
 .landing-page-overlay{
     background: rgba(0, 0, 0, 0.5);
     width: 100vw;
@@ -41,4 +51,14 @@ h1,p{
     justify-content: center;
     align-items: center;
     background: yellow;
+}
+
+.sign-up-div p{
+    padding-bottom: 1rem;
+}
+
+.email-input{
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    background: transparent;
 }
