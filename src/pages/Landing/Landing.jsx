@@ -14,7 +14,7 @@ function Landing() {
         </p>
         <div className="sign-up-div">
             <p>Ready to watch? Enter your email to create or restart your membership.</p>
-            <input type="text"  className="email-input"/>
+            <input type="text"  className="email-input" />
             <button>Get Started</button>
         </div>
       </div>
