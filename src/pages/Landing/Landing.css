@@ -38,7 +38,6 @@ h1,p{
     margin-top: 5rem;
     margin-right: 0.7rem;
     margin-left: 0.7rem;
-    background: orangered;
     text-align: center;
 }
 
@@ -50,7 +49,6 @@ h1,p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: yellow;
 }
 
 .sign-up-div p{
@@ -61,4 +59,5 @@ h1,p{
     margin-bottom: 0.5rem;
     height: 2rem;
     background: transparent;
+    filter:opacity(0.8)
 }
